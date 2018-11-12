@@ -1,0 +1,56 @@
+.bodyBackgroundColor{
+	background-color:#cccccc;
+}
+.header{
+	background-color:white;
+}
+
+.main{
+	background-color:#f2f2f2;
+	margin-left:3%;
+	width: 93%;
+	height:600px;
+	
+}	
+
+.footer{
+	background-color:#f2f2f2;
+	margin-left:3%;
+	width: 93%;
+	
+}
+
+.logo{
+	width:20%;
+	height:10%;
+	margin-left:3%
+}
+
+.contactPhoto{
+	
+	margin-right:20px;
+	width:15%;
+	height:30%;
+}
+
+.paragraphs{
+	width:75%;
+	margin-left:17%;
+}	
+h1{
+	text-align:center;
+	
+}
+
+
+nav ul li{
+	display: inline;
+
+	padding-left:85px;
+}
+img{
+	float:left;
+	width:30%;
+	height:20%;
+}
+

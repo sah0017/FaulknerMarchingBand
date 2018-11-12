@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>March with the Eagles 2018</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="marchWithTheEagles.css">
+</head>
+
+<body class="bodyBackgroundColor">
+
+
+<header>
+
+<div class="header">
+<img class="logo" src="images/logo-horiz.jpg" alt"Faulkner Logo">
+	<div class="container">
+	
+		<div class="row">
+			<div class="col-md-10">
+				<h1>Faulkner University Marching Band</h1>
+			</div>		
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<nav>
+					<ul>
+						<li><a href="events.html">Upcoming Events</a></li>
+						<li><a href="#">Past Performances</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>	
+				</nav>	
+			</div>
+		</div>	
+	</div>
+</div>
+	
+</header>
+
+<main>
+<div class="main">	
+
+<div class="slider">
+
+<img/>
+</div> 
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<img src="images/bandphoto1.jpg" alt="image of March With The Eagles 2018" class="img-thumbnail">
+			<img src="images/bandphoto2.jpg" alt="image of March With The Eagles 2018" class="img-thumbnail">
+			<img src="images/bandphoto3.jpg" alt="image of March With The Eagles 2018" class="img-thumbnail">
+			<img src="images/bandphoto2.jpg" alt="image of March With The Eagles 2018" class="img-thumbnail">
+			</div>
+	</div>
+	
+	
+</div>
+
+</div>	
+</main>	
+
+
+
+
+	
+<footer class="footer">
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			Copyright
+		</div>
+	</div>
+</div>
+</footer>
+	
+
+	
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>	
+
+<script>
+var i= 0;
+var images= [];
+var time= 5000;
+
+images[0]= "images/bandphoto1.jpg" alt="image from March with the Eagles";
+images[1]= "images/bandphoto2.jpg" alt="image from March with the Eagles";
+images[2]= "images/bandphoto3.jpg" alt="image from March with the Eagles";
+images[3]= "images/bandphoto2.jpg" alt="image from March with the Eagles";	
+
+function changeImg(){
+	document.slider.src= images[i];
+	
+	if(i < images.length -1){
+		i++
+	} else {
+		i= 0;
+	}
+	
+	setTimeout("changeImg()", time);
+}
+
+window.onload= changeImg;
+</script>
+
+</body>
+</html>

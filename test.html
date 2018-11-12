@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>March with the Eagles 2018</title>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="marchWithTheEagles.css">
+</head>	
+
+
+<script>
+
+function changeImg(){
+	var i= 0;
+	var images= [];
+	var time= 5000;
+
+	images[0]= "images/bandphoto1.jpg";
+	images[1]= "images/bandphoto2.jpg";
+	images[2]= "images/bandphoto3.jpg";
+	images[3]= "images/bandphoto2.jpg";	
+	
+	for (i=0; i < images.length, i++){
+		document.getElementById("slider").src= images[i];
+
+	}
+	
+	setTimeout("changeImg()", time);
+}
+
+
+</script>
+<body onload="setInterval('changeImg()', 5000);">
+<img src = "images/bandphoto1.jpg" name="slider"> 
+</body>
+
+</html>
