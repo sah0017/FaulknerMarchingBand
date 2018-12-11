@@ -3,55 +3,122 @@
 
 <head>
     <meta charset="utf-8">
-    <title>March with the Eagles 2018</title>
+    <title>Faulkner Marching Band Events</title>
 	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="marchWithTheEagles.css">
+	
+	
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+    $(document).ready(function(){
+        $(".add-row").click(function(){
+            var date = $("#date").val();
+			var time = $("#time").val();
+			var event = $("#event").val();
+            var description = $("#description").val();
+            var markup = "<tr><td><input type='checkbox' name='record'></td><td>" + date + "</td><td>" + time + "</td><td>" + event + "</td><td>" + description + "</td></tr>";
+            $("table tbody").append(markup);
+        });
+        
+        // Find and remove selected table rows
+        $(".delete-row").click(function(){
+            $("table tbody").find('input[name="record"]').each(function(){
+            	if($(this).is(":checked")){
+                    $(this).parents("tr").remove();
+                }
+            });
+        });
+    });    
+</script>
 </head>
+
+
+<body class="bodyBackgroundColor">
 
 <header>
 
 <div class="header">
-<img class="logo" src="images/logo-horiz.jpg" alt"Faulkner Logo">
+<img class="logo" src="images/logo-horiz.jpg" alt="Faulkner Logo">
 	<div class="container">
 	
 		<div class="row">
-			<div class="col-md-10">
+			<div class="col-md-12">
 				<h1>2018-2019 Band Events</h1>
 			</div>		
 		</div>
 
-		<div class="row">
-			<div class="col-md-12">
-				<nav>
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="#">Past Performances</a></li>
-						<li><a href="contact.html">Contact</a></li>
-					</ul>	
-				</nav>	
-			</div>
-		</div>	
 	</div>
 </div>
 	
 </header>
 
-<body class="bodyBackgroundColor">
+<div class="spacer">. </div>
 
-<main>
-<div class="main">
+<main class="main">
 
-
-
+<nav class="indexNav">
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="events.html">Upcoming Events</a></li>
+		<li><a href="performances.html">Band Performances & Activities</a></li>
+		<li><a href="contact.html">Contact Us</a></li>
+	</ul>	
+</nav>	
+<br>
 </div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-sm-8 col-lg-12">
+<form>
+        <input type="date" id="date" placeholder="Date">
+        <input type="time" id="time" placeholder="Time">
+		<input type="text" id="event" placeholder="Event">
+		<input type="textarea" id="textarea" placeholder="Description">
+    	<input type="button" class="add-row" value="Add Row">
+</form>
+    <table>
+        <thead>
+            <tr>
+                <th>Select</th>
+                <th>Date</th>
+                <th>Time</th>
+				<th>Event</th>
+				<th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox" name="record"></td>
+                <td></td>
+                <td></td>
+				<td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <button type="button" class="delete-row">Delete Row</button>
+	<br>
+	
+</div>
+</div>	
 </main>
 
+<footer class="footer">
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<ul>
+				<li>800.879.9816</li>
+				<li>5345 Atlanta Highway, Montgomery, AL 36109</li>
+				<li>&copy;2018 All Rights reserved</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</footer>
+
 </body>
-
-
-
-
-
 
 </html>
